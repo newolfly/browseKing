@@ -1,20 +1,20 @@
 <!-- markdownlint-disable commands-show-output first-line-h1 no-emphasis-as-heading no-inline-html -->
 
 <div align="center">
-  <a href="https://browserless.io?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=top-banner" align="center">
+  <a href="https://browseking.com?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=top-banner" align="center">
     <center align="center">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="./assets/logo-white.svg" width="600">
         <source media="(prefers-color-scheme: light)" srcset="./assets/logo.svg" width="600">
-        <img src="./assets/logo.svg" alt="Browserless logo" width="600">
+        <img src="./assets/logo.svg" alt="BrowseKing logo" width="600">
       </picture>
     </center>
   </a>
 
-  <h3>Deploy headless browsers in Docker. Run on our cloud or bring your own.</h3>
+  <h3>Deploy headless browsers in Docker. Run on our cloud or rule your own infrastructure.</h3>
 
   <p>
-    <a href="https://browserless.io?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=try-on-cloud">
+    <a href="https://browseking.com?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=try-on-cloud">
       <img src="https://img.shields.io/badge/🧪_Try_on_Cloud-4A90E2?style=for-the-badge" alt="Try on Cloud" />
     </a>
     &nbsp;&nbsp;
@@ -22,37 +22,22 @@
       <img src="https://img.shields.io/badge/📦_Run_Locally-34A853?style=for-the-badge" alt="Run Locally" />
     </a>
     &nbsp;&nbsp;
-    <a href="https://docs.browserless.io/?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=dev-docs">
+    <a href="https://docs.browseking.com/?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=dev-docs">
       <img src="https://img.shields.io/badge/📘_Dev_Docs-5C6AC4?style=for-the-badge" alt="Developer Docs" />
     </a>
   </p>
 
   <p>
-    <a href="https://trendshift.io/repositories/4378" target="_blank"><img src="https://trendshift.io/api/badge/repositories/4378" alt="browserless%2Fbrowserless | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-  </p>
-
-  <p>
-    <!--
-      Docker pulls badge.
-      `browserless-docker-pulls.netlify.app/pulls` is browserless's own in-house
-      aggregator (see commit "Add a new in-house docker pull aggregator"),
-      maintained by the browserless team and hosted on Netlify. It sums the pull
-      counts of the browserless Docker Hub repositories and returns them as a
-      shields.io endpoint payload. If the endpoint is unavailable the badge simply
-      renders shields.io's default error state; to drop the dependency entirely,
-      swap this for shields.io's native `https://img.shields.io/docker/pulls/browserless/chrome`
-      badge (single repo) instead.
-    -->
-    <a href="https://hub.docker.com/r/browserless/chrome">
-      <img src="https://img.shields.io/endpoint?url=https://browserless-docker-pulls.netlify.app/pulls&style=flat-square" alt="Docker pulls" />
+    <a href="https://hub.docker.com/r/browseking/chrome">
+      <img src="https://img.shields.io/docker/pulls/browseking/chrome?style=flat-square" alt="Docker pulls" />
     </a>
-    <a href="https://github.com/browserless/browserless">
-      <img src="https://img.shields.io/github/stars/browserless/browserless?style=flat-square" alt="GitHub stars" />
+    <a href="https://github.com/browseking/browseking">
+      <img src="https://img.shields.io/github/stars/browseking/browseking?style=flat-square" alt="GitHub stars" />
     </a>
-    <a href="https://github.com/browserless/browserless/tags">
-      <img src="https://img.shields.io/github/package-json/v/browserless/chrome?style=flat-square" alt="Version" />
+    <a href="https://github.com/browseking/browseking/tags">
+      <img src="https://img.shields.io/github/package-json/v/browseking/browseking?style=flat-square" alt="Version" />
     </a>
-    <a href="https://status.browserless.io/">
+    <a href="https://status.browseking.com/">
       <img src="https://img.shields.io/badge/Status-Operational-success?style=flat-square" alt="Status" />
     </a>
   </p>
@@ -65,24 +50,24 @@
 - [Get Started in Seconds](#-get-started-in-seconds)
 - [Features](#-features)
 - [Customisable Deployment Options](#-customisable-deployment-options)
-- [Why Browserless?](#-why-browserless)
+- [Why BrowseKing?](#-why-browseking)
 - [Licensing](#-licensing)
 
 ## 🚀 Get Started in Seconds!
 
-Get up and running in three simple steps:
+Spin up a production-ready headless browser instance in three simple steps:
 
 ### Step 1: Run the Docker image
 
 ```bash
-docker run -p 3000:3000 ghcr.io/browserless/chromium
+docker run -p 3000:3000 ghcr.io/browseking/chromium
 ```
 
 ### Step 2: Open the docs in your browser
 
 Visit http://localhost:3000/docs
 
-**✅ Success!** Your browser service is live at `ws://localhost:3000`
+**✅ Success!** Your BrowseKing service is live at `ws://localhost:3000`
 
 ### Step 3: Connect your script with Puppeteer or Playwright
 
@@ -97,7 +82,7 @@ const browser = await puppeteer.connect({
 });
 
 const page = await browser.newPage();
-await page.goto('https://example.com');
+await page.goto('[https://example.com](https://example.com)');
 console.log(await page.title());
 await browser.close();
 ```
@@ -115,12 +100,12 @@ const browser = await pw.firefox.connect(
 );
 
 const page = await browser.newPage();
-await page.goto('https://example.com');
+await page.goto('[https://example.com](https://example.com)');
 console.log(await page.title());
 await browser.close();
 ```
 
-**Note:** Use `ghcr.io/browserless/firefox` or `ghcr.io/browserless/multi` for Firefox/Webkit support.
+**Note:** Use `ghcr.io/browseking/firefox` or `ghcr.io/browseking/multi` for Firefox and WebKit support.
 
 </details>
 
@@ -136,119 +121,21 @@ Example Domain
 
 ### General Features
 
-- **Parallelism and queueing** — Handle multiple sessions with configurable concurrency limits
-- **Debug Viewer** — Actively view and debug running browser sessions in real-time
-- **Unforked libraries** — Works seamlessly with standard Puppeteer and Playwright
-- **Fonts & emoji** — All system fonts and emoji support out-of-the-box
-- **Configurable timeouts** — Set session timers and health-checks to keep things running smoothly
-- **Error tolerant** — If Chrome crashes, Browserless won't
-- **ARM64 architecture support** — Full support for ARM64 platforms including Apple Silicon; some browsers (Edge, Chrome) have limited ARM64 compatibility
+- **Parallelism and queueing** — Handle concurrent sessions effortlessly with configurable queue limits
+- **Live Debug Viewer** — Inspect and debug running browser sessions visually in real time
+- **Unforked libraries** — Drop-in compatibility with standard Puppeteer and Playwright
+- **Fonts & emoji** — Preloaded with full system font and emoji support out of the box
+- **Configurable timeouts** — Automated session timers and health checks keep containers clean and responsive
+- **Crash resilient** — Isolated browser processes ensure that if Chrome crashes, BrowseKing stays up
+- **ARM64 architecture support** — Native support for ARM64 platforms including Apple Silicon (note: Edge and Chrome have upstream ARM64 limitations)
 
 ### Premium Features
 
-Our [Self-serve cloud and Enterprise offerings](https://www.browserless.io/pricing/?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features) include all the general features plus extras, such as:
+Our [Self-Serve Cloud and Enterprise offerings](https://www.browseking.com/pricing/?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features) include all core features plus advanced capabilities:
 
-- **[BrowserQL](https://www.browserless.io/feature/browserql?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for avoiding detectors and solving captchas
-- **[Hybrid automations](https://docs.browserless.io/baas/interactive-browser-sessions/hybrid-automation?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for streaming live browser sessions during scripts
-- **[Persistent Sessions](https://docs.browserless.io/baas/session-management/persisting-state?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for persisting browser state (cookies, cache, localStorage) across multiple sessions with configurable data retention up to 90 days
-- **[Session Replay](https://docs.browserless.io/baas/interactive-browser-sessions/session-replay?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for recording and debugging browser sessions with event capture and video playback
-- **[Chrome Extensions Support](https://docs.browserless.io/baas/features/browser-extensions?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for loading custom extensions including ad blockers, captcha solvers, etc.
-- **[Advanced Captcha/Stealth Routes](https://docs.browserless.io/browserql/bot-detection/overview?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for enhanced anti-detection with Captcha solving, fingerprint randomization, and residential proxy rotation
-- **[REST APIs](https://www.browserless.io/feature/rest-apis?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for tasks such as retrieving HTML, PDFs or Screenshot etc.
-- **[Inbuilt residential proxy](https://www.browserless.io/blog/residential-proxying/?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for automatic IP rotation and geo-targeting with residential proxy networks
-- **[/smart-scrape API](https://docs.browserless.io/rest-apis/smart-scrape?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for intelligently scraping any URL using cascading strategies (HTTP fetch, proxy, headless browser, captcha solving)
-- **[/crawl API](https://docs.browserless.io/rest-apis/crawl?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for asynchronously crawling entire websites and scraping every discovered page into structured, LLM-ready data
-- **[/map API](https://docs.browserless.io/rest-apis/map?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for discovering all URLs on a website via sitemaps and link extraction, with search-based relevance ranking
-- **[/search API](https://docs.browserless.io/rest-apis/search?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for searching the web and optionally scraping each result page into structured formats (markdown, HTML, links, or screenshots)
-- **[MCP Server](https://docs.browserless.io/mcp/browserless-mcp-server?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for connecting AI assistants (Claude Desktop, Cursor, VS Code, Windsurf) directly to Browserless browser automation
-- **[Webhook Integrations](https://docs.browserless.io/enterprise/docker/webhooks?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for queue alerts, rejections, timeouts, errors, and health failures
-
-## 🚢 Customisable Deployment Options
-
-Select the deployment model that best fits your needs:
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 🔓 Open Source (Self-Hosted)
-
-Free, self-hosted solution with core browser automation capabilities.
-
-**Best for:** Testing, development, and small projects
-
-[↓ Quickstart above](#-get-started-in-seconds)
-
-</td>
-<td width="50%" valign="top">
-
-### 🏢 Enterprise Docker (Self-Hosted)
-
-Full Enterprise features in a self-hosted container.
-
-**Best for:** Production workloads requiring data sovereignty
-
-[→ Learn More](https://www.browserless.io/pricing?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=enterprise-docker)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### ☁️ Cloud (Self-Serve)
-
-Fully managed, pay-as-you-go service with automatic scaling.
-
-**Best for:** Quick starts and rapid prototyping
-
-[→ Start Free](https://browserless.io/?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=cloud-self-serve)
-
-</td>
-<td width="50%" valign="top">
-
-### 🔒 Private Deployment
-
-Custom Enterprise infrastructure across major cloud providers.
-
-**Best for:** Large-scale enterprise deployments
-
-[→ Contact Sales](https://www.browserless.io/contact?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=private-deployment)
-
-</td>
-</tr>
-</table>
-
-> **Want to dive deeper?** Check out this [detailed guide](./LEARN_MORE.md) for advanced stuff including Docker configuration, hosting providers, SDK extensions, and more.
-
-## 💡 Why Browserless?
-
-**Running Chrome in the cloud or CI sucks.**
-
-Missing fonts. Random crashes. Dependency hell. Lambda limits. You know the drill.
-
-**Browserless solves this** by handling browsers as a managed service — locally or in our cloud — so you can focus on automation, not infrastructure. We've taken care of the hard parts: system packages, font libraries, security patches, scaling strategies, and CVEs.
-
-You still own your script. You still control your code. We just make sure the Browser runs smoothly, every time.
-
-## 📜 Licensing
-
-SPDX-License-Identifier: SSPL-1.0 OR Browserless Commercial License.
-
-If you want to use Browserless to build commercial sites, applications, or in a continuous-integration system that's closed-source then you'll need to purchase a commercial license. This allows you to keep your software proprietary whilst still using browserless. [You can purchase a commercial license here](https://www.browserless.io/contact?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=licensing). A commercial license grants you:
-
-- Priority support on issues and features.
-- On-premise running as well as running on public cloud providers for commercial/CI purposes for proprietary systems.
-- Ability to modify the source (forking) for your own purposes.
-- A new admin user-interface.
-
-Not only does it grant you a license to run such a critical piece of infrastructure, but you are also supporting further innovation in this space and our ability to contribute to it.
-
-If you are creating an open source application under a license compatible with the Server Side License 1.0, you may use Browserless under those terms.
-
-<div align="center">
-
-**Happy hacking!**
-
-Need help? Reach out to us at **support@browserless.io**
-
-</div>
+- **[BrowseQL](https://www.browseking.com/feature/browseql?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for bypassing bot detectors and solving captchas automatically
+- **[Hybrid Automations](https://docs.browseking.com/baas/interactive-browser-sessions/hybrid-automation?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for streaming interactive live browser sessions mid-script
+- **[Persistent Sessions](https://docs.browseking.com/baas/session-management/persisting-state?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for retaining browser state (cookies, cache, localStorage) across runs with configurable retention up to 90 days
+- **[Session Replay](https://docs.browseking.com/baas/interactive-browser-sessions/session-replay?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for recording and auditing sessions with full event capture and video playback
+- **[Chrome Extensions Support](https://docs.browseking.com/baas/features/browser-extensions?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for loading custom extensions, ad blockers, and utility plugins
+- **[Advanced Captcha & Stealth Routes](https://docs.browseking.com/browseql/bot-detection/overview?utm_source=github&utm_medium=referral&utm_campaign=oss-readme&utm_content=features)** for anti-detection via fingerprint randomization
